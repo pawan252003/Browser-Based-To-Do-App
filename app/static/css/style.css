@@ -1,0 +1,333 @@
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #F9FAFB, #F3F4F6);
+  color: #111827;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #3B82F6;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #dbeafe;
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav a {
+    margin: 0.5rem 0;
+    display: block;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #1F2937;
+  color: #D1D5DB;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+footer h6 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+
+/* Flash Messages */
+.flash {
+  padding: 0.9rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: opacity 0.4s ease;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.flash.success {
+  background-color: #DCFCE7;
+  color: #166534;
+  border: 1px solid #22C55E;
+}
+
+.flash.error {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border: 1px solid #EF4444;
+}
+
+/* Close button */
+.flash-close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: inherit;
+  margin-left: 1rem;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+}
+
+.flash-close:hover {
+  opacity: 0.6;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  background-color: #3B82F6;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #2563EB;
+}
+
+.btn-clear {
+  background-color: #EF4444;
+  margin-top: 0.8rem;
+}
+
+.btn-clear:hover {
+  background-color: #B91C1C;
+}
+
+.btn-small {
+  background-color: #6B7280;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.btn-small:hover {
+  background-color: #374151;
+}
+
+/* Login Box */
+.login-box {
+  width: 350px;
+  margin: 8vh auto;
+  padding: 2rem 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #111827;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+@media (max-width: 400px) {
+  .login-box {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+/* Task Box */
+.task-box {
+  background: #ffffff;
+  padding: 1.8rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.task-box h2 {
+  margin-bottom: 1.2rem;
+  color: #111827;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.task-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-form input[type="text"] {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.task-form input[type="text"]:focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.2);
+}
+
+/* Task Table */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+.task-table th, .task-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #E5E7EB;
+  text-align: center;
+}
+
+.task-table th {
+  background-color: #F3F4F6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.task-table td {
+  color: #111827;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge.pending {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge.working {
+  background-color: #DBEAFE;
+  color: #1E3A8A;
+}
+
+.badge.done {
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+/*Delete button*/
+.btn-delete {
+  background: #ef4444; 
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #dc2626; 
+}
+
+/* Empty Task Message */
+.task-box p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #6B7280;
+}
+
+/* Responsive Table */
+@media (max-width: 600px) {
+  .task-table {
+    display: block;
+    overflow-x: auto;
+  }
+  .task-table th, .task-table td {
+    padding: 0.6rem;
+    white-space: nowrap;
+  }
+}
