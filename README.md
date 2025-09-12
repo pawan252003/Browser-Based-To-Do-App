@@ -68,12 +68,6 @@ flask run
 
 ---
 
-## Screenshots
-
-*(Optional: Add screenshots here for better visualization of your app.)*
-
----
-
 ## Author
 
 - **Pawan Kumar**  
