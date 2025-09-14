@@ -13,12 +13,16 @@ def create_app():
     
     db.init_app(app)
 
+    with app.app_context():
+        db.create_all()
+
     from app.routes.auth import auth_bp
     from app.routes.tasks import tasks_bp
     app.register_blueprint(auth_bp)
     app.register_blueprint(tasks_bp)
 
     return app
+
 
 
 
